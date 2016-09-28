@@ -21,18 +21,180 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'blaire' ); ?></a>
+<!-- Start of top header section -->
+    <div class="topbar">
+        <div  class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="topbar-text">
+                        <p> Welcome Customer, You can <span style="color:#F94A4A">Login </span>or <span style="color:#F94A4A">Create an Account</span></p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-5">
+                    <div class="header-top-menu">
+                        <nav>
+                            <ul class="topbar-ul list-unstyled list-inline">
+                               <li>
+                                    <a href="#" class="england">English &#9662;</a>
+                                    <ul class="dropdown">
+                                        <li><a class="spain" href="#">Spanish</a></li>
+                                        <li><a class="french" href="#">French</a></li>
+                                    </ul>
+                                </li>
 
-	<header id="masthead" class="site-header" role="banner">
+                                 <li>
+                                    <a href="#">Currency: $ USD &#9662;</a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">$ CAD</a></li>
+                                        <li><a href="#">€ EUR</a></li>
+                                    </ul>
+                                </li>
 
-		<?php get_template_part( 'components/header/site', 'branding' ); ?>
+                                <li><a href="#"><i class="fa fa-user"></i><span>Account</span></a>
+                                    <ul class="dropdown">
+                                        <li><a href="#"><i class="fa fa-user-plus"></i><span>My Account</span></a></li>
+                                        <li><a href="#"><i class="fa fa-heart"></i><span>My WishList</span></a></li>
+                                        <li><a href="#"><i  class="fa fa-share-square-o"></i><span>Check Out</span></a></li>
+                                        <li><a href="#"><i  class="fa fa-unlock-alt"></i><span>Login</span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of top header section -->
 
-		<?php blaire_the_custom_logo(); ?>
+    <!-- start of menu section -->
+    <div class="menu-wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="menu-container">
+                    <div class="menu">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="http://marioloncarek.com">About</a>
+                                <ul>
+                                    <li><a href="http://marioloncarek.com">School</a>
+                                        <ul>
+                                            <li><a href="http://marioloncarek.com">Lidership</a></li>
+                                            <li><a href="#">History</a></li>
+                                            <li><a href="#">Locations</a></li>
+                                            <li><a href="#">Careers</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Study</a>
+                                        <ul>
+                                            <li><a href="#">Undergraduate</a></li>
+                                            <li><a href="#">Masters</a></li>
+                                            <li><a href="#">International</a></li>
+                                            <li><a href="#">Online</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Research</a>
+                                        <ul>
+                                            <li><a href="#">Undergraduate research</a></li>
+                                            <li><a href="#">Masters research</a></li>
+                                            <li><a href="#">Funding</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Something</a>
+                                        <ul>
+                                            <li><a href="#">Sub something</a></li>
+                                            <li><a href="#">Sub something</a></li>
+                                            <li><a href="#">Sub something</a></li>
+                                            <li><a href="#">Sub something</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="http://marioloncarek.com">News</a>
+                                <ul>
+                                    <li><a href="http://marioloncarek.com">Today</a></li>
+                                    <li><a href="#">Calendar</a></li>
+                                    <li><a href="#">Sport</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="http://marioloncarek.com">Contact</a>
+                                <ul>
+                                    <li><a href="#">School</a>
+                                        <ul>
+                                            <li><a href="#">Lidership</a></li>
+                                            <li><a href="#">History</a></li>
+                                            <li><a href="#">Locations</a></li>
+                                            <li><a href="#">Careers</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Study</a>
+                                        <ul>
+                                            <li><a href="#">Undergraduate</a></li>
+                                            <li><a href="#">Masters</a></li>
+                                            <li><a href="#">International</a></li>
+                                            <li><a href="#">Online</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Study</a>
+                                        <ul>
+                                            <li><a href="#">Undergraduate</a></li>
+                                            <li><a href="#">Masters</a></li>
+                                            <li><a href="#">International</a></li>
+                                            <li><a href="#">Online</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Empty sub</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-		<?php get_template_part( 'components/navigation/navigation', 'top' ); ?>
+    <!-- End of menu section -->
 
-		<?php blaire_social_menu(); ?>
+    <!-- Start of banner section -->
+    <div class="slider-banner-sec">
+        <div class="banner-slider-wrap">
+            <div class="banner-slider-item slider1">
+            </div>
+            <div class="banner-slider-item slider2">
+            </div>
+        </div>
+    </div>
 
-	</header>
-	<div id="content" class="site-content">
+    <div class="banner-home">
+        <div class="row">
+            <div class="col-md-4 col-xs-12 col-sm-12 nopad">
+                <div class="banner-box">
+                    <img class="box-content-img"  src="<?php echo get_template_directory_uri() . '/images/slide3.jpg' ?>">
+                    <div class="caption">
+                        <h2>Womens Fashion Collection</h2>
+                        <button class="btn bbtn-def">Shop Now</button>
+                     </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-xs-12 col-sm-12 nopad">
+                <div class="banner-box">
+                    <img class="box-content-img"  src="<?php echo get_template_directory_uri() . '/images/slide3.jpg' ?>">
+                    <div class="caption">
+                        <h2>Womens Fashion Collection</h2>
+                        <button class="btn bbtn-def">Shop Now</button>
+                     </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-xs-12 col-sm-12 nopad">
+                <div class="banner-box">
+                    <img class="box-content-img"  src="<?php echo get_template_directory_uri() . '/images/sidebox1.jpg' ?>">
+                    <div class="caption">
+                        <h2>Womens Fashion Collection</h2>
+                        <button class="btn bbtn-def">Shop Now</button>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
