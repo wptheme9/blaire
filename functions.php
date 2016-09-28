@@ -123,12 +123,53 @@ function blaire_widgets_init() {
 }
 add_action( 'widgets_init', 'blaire_widgets_init' );
 
+if ( ! function_exists( 'blaire_fonts_url' ) ) :
+    function blaire_fonts_url() {
+        $fonts_url = '';
+        $fonts     = array();
+
+        /* translators: If there are characters in your language that are not supported by Open Sans, translate this to 'off'. Do not translate into your own language. */
+        if ( 'off' !== _x( 'on', 'Raleway font: on or off', 'resortica-lite' ) ) {
+            $fonts[] = 'Raleway:400,500,600,700';
+        }
+
+        /* translators: If there are characters in your language that are not supported by Roboto, translate this to 'off'. Do not translate into your own language. */
+        if ( 'off' !== _x( 'on', 'Poppins font: on or off', 'resortica-lite' ) ) {
+            $fonts[] = 'Poppins';
+        }
+
+        if ( $fonts ) {
+            $fonts_url = add_query_arg( array(
+                'family' => urlencode( implode( '|', $fonts ) ),
+            ), 'https://fonts.googleapis.com/css' );
+        }
+
+        return $fonts_url;
+    }
+endif;
+
 /**
  * Enqueue scripts and styles.
  */
 function blaire_scripts() {
-	wp_enqueue_style( 'blaire-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'blaire-fonts', blaire_fonts_url() , array(), null);
+	wp_enqueue_style( 'blaire-bootstarp-style', get_template_directory_uri() . '/assets/css/bootstrap.min.css');
+	wp_enqueue_style( 'blaire-fontawesome-style', get_template_directory_uri() . '/assets/css/fontawesome.min.css');
+	wp_enqueue_style( 'blaire-slick-style', get_template_directory_uri() . '/assets/css/slick.css');
+	wp_enqueue_style( 'blaire-megamenu-style', get_template_directory_uri() . '/assets/css/megamenu.css');
+	wp_enqueue_style( 'blaire-tabss-style', get_template_directory_uri() . '/assets/css/tabs.css');
+	wp_enqueue_style( 'blaire-custom-style', get_template_directory_uri() . '/assets/css/style.css');
 
+
+	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'blaire-bootstrap-min', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'blaire-cbpFWTabs', get_template_directory_uri() . '/assets/js/cbpFWTabs.js', array(), '20151215', true );
+	wp_enqueue_script( 'blaire-fancybox', get_template_directory_uri() . '/assets/js/jquery.fancybox.pack.js', array(), '20151215', true );
+	wp_enqueue_script( 'blaire-stellar', get_template_directory_uri() . '/assets/js/jquery.stellar.js', array(), '20151215', true );
+	wp_enqueue_script( 'blaire-fade', get_template_directory_uri() . '/assets/js/fade.js', array(), '20151215', true );
+	wp_enqueue_script( 'blaire-slick', get_template_directory_uri() . '/assets/js/slick.min.js', array(), '20151215', true );
+	wp_enqueue_script( 'blaire-megamenu', get_template_directory_uri() . '/assets/js/megamenu.js', array(), '20151215', true );
+	wp_enqueue_script( 'blaire-main', get_template_directory_uri() . '/assets/js/main.js', array(), '20151215', true );
 	wp_enqueue_script( 'blaire-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'blaire-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20151215', true );
