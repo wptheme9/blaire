@@ -164,9 +164,9 @@ function blaire_scripts() {
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'blaire-bootstrap-min', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'blaire-cbpFWTabs', get_template_directory_uri() . '/assets/js/cbpFWTabs.js', array(), '20151215', true );
-	wp_enqueue_script( 'blaire-fancybox', get_template_directory_uri() . '/assets/js/jquery.fancybox.pack.js', array(), '20151215', true );
-	wp_enqueue_script( 'blaire-stellar', get_template_directory_uri() . '/assets/js/jquery.stellar.js', array(), '20151215', true );
-	wp_enqueue_script( 'blaire-fade', get_template_directory_uri() . '/assets/js/fade.js', array(), '20151215', true );
+	// wp_enqueue_script( 'blaire-fancybox', get_template_directory_uri() . '/assets/js/jquery.fancybox.pack.js', array(), '20151215', true );
+	// wp_enqueue_script( 'blaire-stellar', get_template_directory_uri() . '/assets/js/jquery.stellar.js', array(), '20151215', true );
+	// wp_enqueue_script( 'blaire-fade', get_template_directory_uri() . '/assets/js/fade.js', array(), '20151215', true );
 	wp_enqueue_script( 'blaire-slick', get_template_directory_uri() . '/assets/js/slick.min.js', array(), '20151215', true );
 	wp_enqueue_script( 'blaire-megamenu', get_template_directory_uri() . '/assets/js/megamenu.js', array(), '20151215', true );
 	wp_enqueue_script( 'blaire-main', get_template_directory_uri() . '/assets/js/main.js', array(), '20151215', true );
