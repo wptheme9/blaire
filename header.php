@@ -158,9 +158,9 @@
     <!-- Start of banner section -->
     <div class="slider-banner-sec">
         <div class="banner-slider-wrap">
-            <div class="banner-slider-item slider1">
+            <div class="banner-slider-item" style="background-image: url(<?php echo get_template_directory_uri() . '/images/slider1.jpg' ?>)">
             </div>
-            <div class="banner-slider-item slider2">
+            <div class="banner-slider-item" style="background-image: url(<?php echo get_template_directory_uri() . '/images/slider2.jpg' ?>)">
             </div>
         </div>
     </div>

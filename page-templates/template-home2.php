@@ -764,8 +764,8 @@ get_header(); ?>
                             <div class="col-md-3 col-sm-6 ">
                                 <div class="single-product">
                                     <div class="product-img">
-                                        <a href="#"><img class="primary-image" src="images/new1.jpg" alt=""></a>
-                                        <a href="#"><img class="secondary-image" src="images/new2.jpg" alt=""></a>
+                                        <a href="#"><img class="primary-image" src="<?php echo get_template_directory_uri() . '/images/new1.jpg'?>" alt=""></a>
+                                        <a href="#"><img class="secondary-image" src="<?php echo get_template_directory_uri() . '/images/new2.jpg'?>" alt=""></a>
                                     </div>
                                     <div class="product-content">
                                         <h2 class="product-name"><a href="#">Pellentesque posuere</a></h2>
@@ -828,7 +828,7 @@ get_header(); ?>
                     <div class="blog-post-item">
                         <div class="blog-post">
                             <div class="blog-image">
-                                <img src="images/blog1.jpg">
+                                <img src="<?php echo get_template_directory_uri() . '/images/blog1.jpg'?>">
                             </div>
                              <div class="blog-text">
                                 <h3>Try Going Negative</h3>
@@ -847,7 +847,7 @@ get_header(); ?>
                     <div class="blog-post-item">
                         <div class="blog-post">
                             <div class="blog-image">
-                                <img src="images/blog2.jpg">
+                                <img src="<?php echo get_template_directory_uri() . '/images/blog2.jpg'?>">
                             </div>
                              <div class="blog-text">
                                 <h3>Try Going Negative</h3>
@@ -866,7 +866,7 @@ get_header(); ?>
                     <div class="blog-post-item">
                         <div class="blog-post">
                             <div class="blog-image">
-                                <img src="images/blog3.jpg">
+                                <img src="<?php echo get_template_directory_uri() . '/images/blog3.jpg'?>">
                             </div>
                              <div class="blog-text">
                                 <h3>Try Going Negative</h3>
@@ -885,7 +885,7 @@ get_header(); ?>
                     <div class="blog-post-item">
                         <div class="blog-post">
                             <div class="blog-image">
-                                <img src="images/blog4.jpg">
+                                <img src="<?php echo get_template_directory_uri() . '/images/blog4.jpg'?>">
                             </div>
                              <div class="blog-text">
                                 <h3>Try Going Negative</h3>

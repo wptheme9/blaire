@@ -1,4 +1,5 @@
 /*global $ */
+$ = jQuery.noConflict();
 $(document).ready(function () {
 
     "use strict";

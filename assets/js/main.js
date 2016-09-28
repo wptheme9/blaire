@@ -1,5 +1,7 @@
+$ = jQuery.noConflict();
 jQuery(document).ready(function($){
-	$('.banner-slider-wrap').slick({
+    "use strict";
+	jQuery('.banner-slider-wrap').slick({
 	  dots: false,
 	  infinite: true,
 	  speed: 500,
@@ -7,7 +9,7 @@ jQuery(document).ready(function($){
 	  arrows: false
 	});
 
-    $('.slider-featured-wrap').slick({
+    jQuery('.slider-featured-wrap').slick({
       dots: false,
       infinite: true,
       speed: 500,
@@ -15,7 +17,7 @@ jQuery(document).ready(function($){
       arrows: false
     });
 
-	$('.trending-slider-carousel').slick({
+	jQuery('.trending-slider-carousel').slick({
       infinite: true,
       autoplaySpeed: 7000,
       arrows: false,
@@ -47,7 +49,7 @@ jQuery(document).ready(function($){
       ]
     });
 
-    $('.blog-post-wrapper').slick({
+    jQuery('.blog-post-wrapper').slick({
       infinite: true,
       autoplaySpeed: 7000,
       arrows: false,
@@ -97,7 +99,7 @@ jQuery(document).ready(function($){
         /**
          * Set theme and captions
          */
-        $('#countdown-3').timeTo({
+        jQuery('#countdown-3').timeTo({
             timeTo: date,
             displayDays: 2,
             theme: "black",
@@ -106,7 +108,7 @@ jQuery(document).ready(function($){
             captionSize: 14
         });
 
-           $('#countdown-4').timeTo({
+           jQuery('#countdown-4').timeTo({
             timeTo: date,
             displayDays: 2,
             theme: "black",
@@ -131,105 +133,105 @@ jQuery(document).ready(function($){
 	var MqL = 1170;
 	//move nav element position according to window width
 	moveNavigation();
-	$(window).on('resize', function(){
+	jQuery(window).on('resize', function(){
 		(!window.requestAnimationFrame) ? setTimeout(moveNavigation, 300) : window.requestAnimationFrame(moveNavigation);
 	});
 
 	//mobile - open lateral menu clicking on the menu icon
-	$('.nav-trigger').on('click', function(event){
+	jQuery('.nav-trigger').on('click', function(event){
 		event.preventDefault();
-		if( $('.main-content').hasClass('nav-is-visible') ) {
+		if( jQuery('.main-content').hasClass('nav-is-visible') ) {
 			closeNav();
-			$('.overlay').removeClass('is-visible');
+			jQuery('.overlay').removeClass('is-visible');
 		} else {
-			$(this).addClass('nav-is-visible');
-			$('.primary-nav').addClass('nav-is-visible');
-			$('.main-header').addClass('nav-is-visible');
-			$('.main-content').addClass('nav-is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-				$('body').addClass('overflow-hidden');
+			jQuery(this).addClass('nav-is-visible');
+			jQuery('.primary-nav').addClass('nav-is-visible');
+			jQuery('.main-header').addClass('nav-is-visible');
+			jQuery('.main-content').addClass('nav-is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+				jQuery('body').addClass('overflow-hidden');
 			});
 			toggleSearch('close');
-			$('.overlay').addClass('is-visible');
+			jQuery('.overlay').addClass('is-visible');
 		}
 	});
 
 	//open search form
-	$('.search-trigger').on('click', function(event){
+	jQuery('.search-trigger').on('click', function(event){
 		event.preventDefault();
 		toggleSearch();
 		closeNav();
 	});
 
 	//close lateral menu on mobile
-	$('.overlay').on('swiperight', function(){
-		if($('.primary-nav').hasClass('nav-is-visible')) {
+	jquery('.overlay').on('swiperight', function(){
+		if(jQuery('.primary-nav').hasClass('nav-is-visible')) {
 			closeNav();
-			$('.overlay').removeClass('is-visible');
+			jquery('.overlay').removeClass('is-visible');
 		}
 	});
-	$('.nav-on-left .overlay').on('swipeleft', function(){
-		if($('.primary-nav').hasClass('nav-is-visible')) {
+	jQuery('.nav-on-left .overlay').on('swipeleft', function(){
+		if(jQuery('.primary-nav').hasClass('nav-is-visible')) {
 			closeNav();
-			$('.overlay').removeClass('is-visible');
+			jQuery('.overlay').removeClass('is-visible');
 		}
 	});
-	$('.overlay').on('click', function(){
+	jQuery('.overlay').on('click', function(){
 		closeNav();
 		toggleSearch('close')
-		$('.overlay').removeClass('is-visible');
+		jQuery('.overlay').removeClass('is-visible');
 	});
 
 
 	//prevent default clicking on direct children of .primary-nav
-	$('.primary-nav').children('.has-children').children('a').on('click', function(event){
+	jQuery('.primary-nav').children('.has-children').children('a').on('click', function(event){
 		event.preventDefault();
 	});
 	//open submenu
-	$('.has-children').children('a').on('click', function(event){
+	jQuery('.has-children').children('a').on('click', function(event){
 		if( !checkWindowWidth() ) event.preventDefault();
 		var selected = $(this);
 		if( selected.next('ul').hasClass('is-hidden') ) {
 			//desktop version only
 			selected.addClass('selected').next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('moves-out');
 			selected.parent('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
-			$('.overlay').addClass('is-visible');
+			jQuery('.overlay').addClass('is-visible');
 		} else {
 			selected.removeClass('selected').next('ul').addClass('is-hidden').end().parent('.has-children').parent('ul').removeClass('moves-out');
-			$('.overlay').removeClass('is-visible');
+			jQuery('.overlay').removeClass('is-visible');
 		}
 		toggleSearch('close');
 	});
 
 	//submenu items - go back link
-	$('.go-back').on('click', function(){
-		$(this).parent('ul').addClass('is-hidden').parent('.has-children').parent('ul').removeClass('moves-out');
+	jQuery('.go-back').on('click', function(){
+		jQuery(this).parent('ul').addClass('is-hidden').parent('.has-children').parent('ul').removeClass('moves-out');
 	});
 
 	function closeNav() {
-		$('.nav-trigger').removeClass('nav-is-visible');
-		$('.main-header').removeClass('nav-is-visible');
-		$('.primary-nav').removeClass('nav-is-visible');
-		$('.has-children ul').addClass('is-hidden');
-		$('.has-children a').removeClass('selected');
-		$('.moves-out').removeClass('moves-out');
-		$('.main-content').removeClass('nav-is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
-			$('body').removeClass('overflow-hidden');
+		jQuery('.nav-trigger').removeClass('nav-is-visible');
+		jQuery('.main-header').removeClass('nav-is-visible');
+		jQuery('.primary-nav').removeClass('nav-is-visible');
+		jQuery('.has-children ul').addClass('is-hidden');
+		jQuery('.has-children a').removeClass('selected');
+		jQuery('.moves-out').removeClass('moves-out');
+		jQuery('.main-content').removeClass('nav-is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
+			jQuery('body').removeClass('overflow-hidden');
 		});
 	}
 
 	function toggleSearch(type) {
 		if(type=="close") {
 			//close serach
-			$('.search').removeClass('is-visible');
-			$('.search-trigger').removeClass('search-is-visible');
-			$('.overlay').removeClass('search-is-visible');
+			jQuery('.search').removeClass('is-visible');
+			jQuery('.search-trigger').removeClass('search-is-visible');
+			jQuery('.overlay').removeClass('search-is-visible');
 		} else {
 			//toggle search visibility
-			$('.search').toggleClass('is-visible');
-			$('.search-trigger').toggleClass('search-is-visible');
-			$('.overlay').toggleClass('search-is-visible');
-			if($(window).width() > MqL && $('.search').hasClass('is-visible')) $('.search').find('input[type="search"]').focus();
-			($('.search').hasClass('is-visible')) ? $('.overlay').addClass('is-visible') : $('.overlay').removeClass('is-visible') ;
+			jQuery('.search').toggleClass('is-visible');
+			jQuery('.search-trigger').toggleClass('search-is-visible');
+			jQuery('.overlay').toggleClass('search-is-visible');
+			if($(window).width() > MqL && $('.search').hasClass('is-visible')) jQuery('.search').find('input[type="search"]').focus();
+			(jQuery('.search').hasClass('is-visible')) ? $('.overlay').addClass('is-visible') : $('.overlay').removeClass('is-visible') ;
 		}
 	}
 
