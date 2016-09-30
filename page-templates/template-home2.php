@@ -3,6 +3,69 @@
  * Template Name: Home
  */
 get_header(); ?>
+
+ <!-- Start of feature section -->
+    <div class="feature-sec">
+        <div class="row">
+            <div class="col-md-4 col-xs-12 col-sm-12 nopad feature-content-wrap color1">
+                <i class="fa fa-usd"></i>
+                <div class="feature-text-wrapper">
+                    <h3>Money Back Gurantee</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-xs-12 col-sm-12 nopad feature-content-wrap color2">
+                <i class="fa fa-truck"></i>
+                <div class="feature-text-wrapper">
+                    <h3>Free Shipping</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-xs-12 col-sm-12 nopad feature-content-wrap color3">
+                <i class="fa fa-life-ring"></i>
+                <div class="feature-text-wrapper">
+                    <h3>Online Support</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End of feature section -->
+
+    <div class="banner-home sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 nopad">
+                    <div class="banner-box box-large">
+                        <div class="caption">
+                            <h2>Womens Fashion Collection</h2>
+                            <h3>Sale up to 50%</h3>
+                            <button class="btn btn-def">Shop Now</button>
+                         </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-sm-12 nopad">
+                    <div class="banner-box box-first">
+                        <div class="caption">
+                            <h2>New fashion trends</h2>
+                            <h3>Sale up to 50%</h3>
+                            <button class="btn btn-def">Shop Now</button>
+                         </div>
+                    </div>
+                    <div class="banner-box box-second">
+                        <div class="caption">
+                            <h2>fresh arrival Collection</h2>
+                            <h3>Sale up to 50%</h3>
+                            <button class="btn btn-def">Shop Now</button>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
  <!-- Start of trending section -->
     <div class="trending-section sec">
         <div class="container">
@@ -285,35 +348,6 @@ get_header(); ?>
         </div>
     </div>
 
-     <!-- Start of feature section -->
-    <div class="feature-sec">
-        <div class="row">
-            <div class="col-md-4 col-xs-12 col-sm-12 nopad feature-content-wrap color1">
-                <i class="fa fa-usd"></i>
-                <div class="feature-text-wrapper">
-                    <h3>Money Back Gurantee</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-xs-12 col-sm-12 nopad feature-content-wrap color2">
-                <i class="fa fa-truck"></i>
-                <div class="feature-text-wrapper">
-                    <h3>Free Shipping</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-xs-12 col-sm-12 nopad feature-content-wrap color3">
-                <i class="fa fa-life-ring"></i>
-                <div class="feature-text-wrapper">
-                    <h3>Online Support</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End of feature section -->
 
     <!-- Start of product accordion section -->
     <div class="product-accordion sec">

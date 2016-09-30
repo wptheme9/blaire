@@ -1,18 +1,19 @@
 
-/*  font-awesome */
-/*
-@font-face {
-  font-family: 'FontAwesome';
-  src: url('../fonts/fontawesome/fontawesome-webfont.eot?v=4.3.0');
-  src: url('../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../fonts/fontawesome/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('../fonts/fontawesome/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('../fonts/fontawesome/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('../fonts/fontawesome/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}*/
+// /*  font-awesome */
+
+// @font-face {
+//   font-family: 'FontAwesome';
+//   src: url('../fonts/fontawesome/fontawesome-webfont.eot?v=4.3.0');
+//   src: url('../fonts/fontawesome/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'), url('../fonts/fontawesome/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('../fonts/fontawesome/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('../fonts/fontawesome/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('../fonts/fontawesome/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+// }
 
 /* GENERAL STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1,h2,h3,h4,h5,h6{
   font-family: "Poppins",sans-serif;
+  line-height: 32px;
 }
 body{
   font-family: "Raleway",sans-serif;
@@ -38,8 +39,17 @@ img {
   max-width: 100%;
   height: auto;
 }
-/**/
+/*buttons*/
 
+.btn-def {
+    padding: 6px 15px;
+    background: #1a1a1a;
+    color: #fff;
+    overflow: hidden;
+    -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+    border-radius: 0 !important;
+}
 
 .topbar {
     background: #111 none repeat scroll 0% 0%;
@@ -126,7 +136,7 @@ img {
     width: 21px;
     height: 21px;
     position: absolute;
-    background: #24ded6;
+    background: #fbc825;
     left: 11px;
     top: -6px;
     padding-left: 7px;
@@ -237,7 +247,7 @@ img {
 
     font-weight: bold;
     font-size: 22px;
-    color: #24ded6;
+    color: #fbc825;
 }
 .cart-btn-group {
     position: relative;
@@ -255,7 +265,7 @@ img {
     margin-top: 8px;
 }
 .checkout:hover {
-    background: #24ded6;
+    background: #fbc825;
     color: #fff;
     transition: all 0.6s ease-out 0s;
 }
@@ -374,24 +384,7 @@ button, input, optgroup, select, textarea {
 
   /*Box Content
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.per {
-    font-size: 66px;
-}
-.box-content {
-    padding-top: 32px;
 
-}
-.col1-row h3 {
-    font-size: 35px;
-    padding-bottom: 1px;
-    padding-left: 20px;
-    padding-top: 19px;
-    margin-top: -21px;
-}
-.col-row {
-    position: relative;
-    overflow: hidden;
-}
 
 .caption-no-img {
     text-align: center !important;
@@ -401,22 +394,28 @@ button, input, optgroup, select, textarea {
     height: 258px;
     margin-bottom: 0;
   }
-.caption-no-img h2 {
-    margin-top: 64px;
-    font-size: 21px;
-    font-weight: 400;
-    letter-spacing: 3.5px;
-    text-transform: uppercase;
-    color: #fff;
-    padding: 20px;
-}
+
 .caption h2 {
-    margin-top: 12px;
-    font-size: 18px;
-    font-weight: 400;
-    letter-spacing: 0.5px;
+    font-size: 23px;
+    font-weight: bold;
+    font-family: "Poppins",sans-serif;
     text-transform: uppercase;
-    font-family: "Raleway",sans-serif;
+    margin-bottom: 29px;
+}
+.caption h2:after {
+    content: "";
+    left: 26px;
+    width: 70px;
+    display: block;
+    position: absolute;
+    border-top: 2px solid #fbc825;
+    margin-top: 13px;
+}
+.caption h3 {
+    font-size: 17px;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
 .caption-large h2 {
     margin-top: 12px;
@@ -427,58 +426,51 @@ button, input, optgroup, select, textarea {
     text-transform: uppercase;
     color: #333 !important;
 }
-.box-content-btn {
-    padding: 6px 15px;
-    background: #1a1a1a;
-    color: #fff;
-    overflow: hidden;
-    -webkit-transition: background-color 0.3s;
-    transition: background-color 0.3s;
-    border-radius: 0;
-    margin-top: 8px;
-}
-.btn.box-content-btn:hover {
-    background: #24ded6;
-    color: #fff;
-    transition: all 0.6s ease-out 0s;
-}
-.box-content-btn-no-img{
-background: #fff;
-color: #333;
-padding: 6px 15px;
+/*banner box*/
 
-    overflow: hidden;
-    -webkit-transition: background-color 0.3s;
-    transition: background-color 0.3s;
-    border-radius: 0;
-    margin-top: 8px;
+.banner-home .banner-box {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  text-align: center;
+   display: table;
+    background-size: cover !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
-.col2-row h3 {
-    font-size: 35px;
-    padding-bottom: 1px;
-    padding-left: 20px;
-    padding-top: 19px;
+.banner-home .box-large {
+    height: 500px;
+    outline: 0;
+    background-image: url(../images/test.jpg);
+    width: 100%;
 }
-.btn.btn-custom {
-    margin-left: 23px;
-    padding: 9px 41px;
-    background: #3595D2 none repeat scroll 0% 0%;
-    margin-bottom: 48px;
+.banner-home .box-first {
+    height: 250px;
+    outline: 0;
+    background-image: url(../images/banner1.jpg);
+    width: 100%;
 }
-
-.col1-row2 {
-    margin-top: 6px;
+.banner-home .box-second {
+    height: 250px;
+    outline: 0;
+    background-image: url(../images/girldress.jpg);
+    width: 100%;
 }
-.col2-row2 {
-    margin-top: 6px;
+.banner-home .caption {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    padding-left: 50px;
+    padding-right: 200px;
+}
+.nopad{
+  padding: 0;
 }
 
-
-
-.large-img {
-    background: #F0EEF1 none repeat scroll 0% 0%;
-
-
+.banner-home .banner-box img {
+width: 100%;
 }
 
 /*..... Trending section.... */
@@ -564,21 +556,21 @@ figcaption h2 {
   max-height: 100%;
   padding: 4px;
 }
-
-
+.isreview {
+    display: block;
+    margin-top: 5px;
+}
 .price-val.product-price {
-    color: #333;
+    color: #fbc825;
+    font-size: 16px;
+    font-family: Poppins;
+    margin-top: 7px;
 }
 .inner {
-    padding: 10px 0px;
+    padding: 17px 6px;
     transform: translateY(0px);
     transition-duration: 0.3s;
-
 }
-
-
-
-
 
 
 
@@ -614,25 +606,42 @@ figcaption h2 {
   padding-top: 60px;
 }
 .trending-slider-item .product-icons a {
-  background: #202020 none repeat scroll 0 0;
-  border-radius: 0;
-  box-shadow: none;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 400;
-  height: 36px;
-  line-height: 36px;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
-  position: relative;
-  text-align: center;
-  text-shadow: none;
-  width: 42px;
-  text-decoration: none;
+    background: #fff none repeat scroll 0 0;
+    border-radius: 0;
+    box-shadow: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 400;
+    height: 36px;
+    line-height: 36px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    text-shadow: none;
+    width: 42px;
+    text-decoration: none;
+}
+.add-cart-btn {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 0;
+    box-shadow: none;
+    color: #333;
+    font-size: 15px;
+    margin-top: 5px;
+    padding: 9px 11px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    text-shadow: none;
+    outline: 0;
+}
+.add-cart-btn i {
+    margin-right: 10px;
 }
 .trending-slider-item .product-icons a:hover {
-  background: #24ded6;
+  background: #fbc825;
   transition: all 0.6s ease-out 0s;
 }
 .trending-slider-item .hiden-text { z-index:1;padding-top: 40px;transform: translate(0px, -50px);
@@ -647,13 +656,12 @@ transition: all 1s ease-out 0s;}
   z-index: 1;
   text-align: center;
 }
-
 .product-title a {
-  font-size: 14px;
-  color: #333;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-family: "Poppins",sans-serif !important;
+    font-size: 15px;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Poppins",sans-serif !important;
 }
 
 .product-label-trending {
@@ -705,7 +713,7 @@ transition: all 1s ease-out 0s;}
 }
 .product-label-trending > span.label-sale {
   color: #FFF;
-  background-color: #24ded6;
+  background-color: #fbc825;
 }
 .product-label-trending > span {
   height: 28px;
@@ -831,7 +839,7 @@ input {
     line-height: 400;
 }
 .black-text button {
-    background: #24ded6;
+    background: #fbc825;
     border: medium none;
     float: left;
     font-size: 18px;
@@ -1225,7 +1233,7 @@ color: #DDD;
     padding-left: 8px;
     margin-top: 6px;
     color: #fff;
-    background: #24ded6;
+    background: #fbc825;
 }}
 
 .product-list {
@@ -1469,7 +1477,7 @@ h5,h4{
   right: 0px;
   top: 15px;
   border-radius: 50%;
-  background:#24ded6;
+  background:#fbc825;
   left: 20%;
 }
 .slider-featured-item .round-label h3 {
@@ -1541,7 +1549,7 @@ h5,h4{
 
 .add-to-cart a {
   text-decoration: none;
-  background: #24ded6;
+  background: #fbc825;
   border-bottom: 0px none;
   border-top: 0px none;
   font-size: 12px;
@@ -1565,7 +1573,11 @@ h5,h4{
   font-family: Poppins;
 }
 .product-accordion .product-name {
-    font-size: 17px;
+    font-size: 15px;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Poppins",sans-serif !important;
 }
 .product-accordion .product-img .secondary-image {
   left: 0;
@@ -1845,7 +1857,7 @@ figure.effect-ming:hover img {
     margin-top: 8px;
 }
 .read-more:hover {
-    background: #24ded6;
+    background: #fbc825;
     color: #fff;
     transition: all 0.6s ease-out 0s;
 }
@@ -1854,7 +1866,7 @@ figure.effect-ming:hover img {
     margin-top: 42px;
 }
 .about-feature-sec {
-    background: #24ded6;
+    background: #fbc825;
     color: #fff;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -1898,7 +1910,7 @@ figure.effect-ming:hover img {
 
 .about {
     min-height: 393px;
-    background: #24ded6;
+    background: #fbc825;
     margin-top: 55px;
 }
 .aboutus-text {
@@ -1945,7 +1957,7 @@ figure.effect-ming:hover img {
 }
 .social {
     height: 51px;
-    background: #24ded6 ;
+    background: #fbc825 ;
 }
 
 .social ul li {
@@ -2055,53 +2067,6 @@ display: inline-block;
     left: 7%;
 }
 
-/*banner box*/
-
-.banner-home .banner-box {
-  overflow: hidden;
-  position: relative;
-  display: block;
-  text-align: center;
-  height: 270px;
-}
-.banner-home  .caption {
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  left: 5%;
-  top: 5%;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.8);
-}
-.banner-home .banner-box-no-img {
-  text-align: center !important;
-  display: inline-block;
-  background: #24ded6;
-  position: relative;
-  margin: 0 auto;
-  left: 0;
-  visibility: visible;
-  padding: 30px;
-  overflow: hidden;
-  width: 100%;
-}
-.banner-home .banner-box-no-img h2 {
-  float: left;
-  font-size: 21px;
-  font-weight: 400;
-  letter-spacing: 3.5px;
-  text-transform: uppercase;
-  color: #fff;
-  margin-top: 46px;
-  line-height: 37px;
-}
-.nopad{
-  padding: 0;
-}
-
-.banner-home .banner-box img {
-width: 100%;
-}
 
 
 
@@ -2243,7 +2208,7 @@ cursor: pointer;
 -moz-user-select: none;
 background-image: none;
 margin-top: 20px;
-background: #24ded6;
+background: #fbc825;
 border-radius: 0;
 color: #fff;
 }
@@ -2273,7 +2238,7 @@ color: #fff;
     width: 100%;
 }
 .clock-product .countdown-text {
-    border: 2px solid #24ded6;
+    border: 2px solid #fbc825;
     padding: 10px;
     border-radius: 50%;
     font-family: "Poppins",sans-serif;
@@ -2286,7 +2251,7 @@ color: #fff;
 }
 
 .countdown-desc span {
-    color: #24ded6;
+    color: #fbc825;
     font-size: 25px;
 }
 
